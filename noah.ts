@@ -15,7 +15,7 @@ class Animals {
     this.diet = "" ;
   }
   public sayMyName(){
-    console.log(`I am a ${this.name}`);
+    console.log(`I am a ${this.color} ${this.name} with ${this.paws} legs`);
   }
   public pet() {
     if (this.paws === 4) {
@@ -24,7 +24,7 @@ class Animals {
   }
   public feed() {
     if (this.color === "black") {
-      console.log("you can feed me !");
+      console.log(`you can feed me with ${this.diet}`);
     }
   }
   public picture() {
@@ -35,6 +35,14 @@ class Animals {
   }
   public movement(){
     console.log(`I ${this.move} !`)
+  }
+  public sayEverything(){
+    this.sayMyName();
+    this.pet();
+    this.feed();
+    this.picture();
+    this.talk();
+    this.movement();
   }
 }
 class Cat extends Animals {
@@ -96,75 +104,30 @@ class Fish extends Animals {
     this.diet = diet;
   }
 }
-const europeanCat = new Cat("european Cat", "black", "carnivorous");
-const carthusianCat = new Cat('carthusian Cat', "ginger", 'carnivorous');
-const newfoundlandDog = new Dog('Newfoundland Dog', "black", 'omnivorous');
-const moonmoonDog = new Dog('Moon Moon Dog', "white", 'omnivorous');
-const chickadeeBird = new Bird("Chickadee Bird", "blue", "insect", 2);
+const europeanCat = new Cat("european Cat", "black", "meat");
+const carthusianCat = new Cat('carthusian Cat', "ginger", 'meat');
+const newfoundlandDog = new Dog('Newfoundland Dog', "black", 'everything edible');
+const moonmoonDog = new Dog('Moon Moon Dog', "white", 'everything edible');
+const chickadeeBird = new Bird("Chickadee Bird", "blue", "insects", 2);
 const blackBird = new Bird("Blackbird", "black", "insects", 2);
 const tunaFish = new Fish('tuna', "silver", "fish");
-const sharkFish = new Fish('shark', "grey", "carnivorous");
+const sharkFish = new Fish('shark', "grey", "meat");
 const maggot = new Insect('maggot', 0, "white", "crawl", "rotten flesh", 0);
 
-europeanCat.sayMyName();
-europeanCat.pet();
-europeanCat.feed();
-europeanCat.talk();
-europeanCat.movement();
-europeanCat.picture();
+europeanCat.sayEverything();
 
-carthusianCat.sayMyName();
-carthusianCat.pet();
-carthusianCat.feed();
-carthusianCat.talk();
-carthusianCat.movement();
-carthusianCat.picture();
+carthusianCat.sayEverything();
 
-newfoundlandDog.sayMyName();
-newfoundlandDog.pet();
-newfoundlandDog.feed();
-newfoundlandDog.talk();
-newfoundlandDog.movement();
-newfoundlandDog.picture();
+newfoundlandDog.sayEverything();
 
-moonmoonDog.sayMyName();
-moonmoonDog.pet();
-moonmoonDog.feed();
-moonmoonDog.talk();
-moonmoonDog.movement();
-moonmoonDog.picture();
+moonmoonDog.sayEverything();
 
-chickadeeBird.sayMyName();
-chickadeeBird.pet();
-chickadeeBird.feed();
-chickadeeBird.talk();
-chickadeeBird.movement();
-chickadeeBird.picture();
+chickadeeBird.sayEverything();
 
-blackBird.sayMyName();
-blackBird.pet();
-blackBird.feed();
-blackBird.talk();
-blackBird.movement();
-blackBird.picture();
+blackBird.sayEverything();
 
-tunaFish.sayMyName();
-tunaFish.pet();
-tunaFish.feed();
-tunaFish.talk();
-tunaFish.movement();
-tunaFish.picture();
+tunaFish.sayEverything();
 
-sharkFish.sayMyName();
-sharkFish.pet();
-sharkFish.feed();
-sharkFish.talk();
-sharkFish.movement();
-sharkFish.picture();
+sharkFish.sayEverything();
 
-maggot.sayMyName();
-maggot.pet();
-maggot.feed();
-maggot.talk();
-maggot.movement();
-maggot.picture();
+maggot.sayEverything();
