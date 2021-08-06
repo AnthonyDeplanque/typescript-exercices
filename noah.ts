@@ -69,7 +69,7 @@ class Dog extends Animals {
 }
 class Bird extends Animals {
   protected wings : number;
-  constructor(name: string, color: string, diet: string, wings:number){
+  constructor(name: string, color: string, diet: string){
     super();
     this.name= name;
     this.paws = 2;
@@ -108,8 +108,8 @@ const europeanCat = new Cat("european Cat", "black", "meat");
 const carthusianCat = new Cat('carthusian Cat', "ginger", 'meat');
 const newfoundlandDog = new Dog('Newfoundland Dog', "black", 'everything edible');
 const moonmoonDog = new Dog('Moon Moon Dog', "white", 'everything edible');
-const chickadeeBird = new Bird("Chickadee Bird", "blue", "insects", 2);
-const blackBird = new Bird("Blackbird", "black", "insects", 2);
+const chickadeeBird = new Bird("Chickadee Bird", "blue", "insects");
+const blackBird = new Bird("Blackbird", "black", "insects");
 const tunaFish = new Fish('tuna', "silver", "fish");
 const sharkFish = new Fish('shark', "grey", "meat");
 const maggot = new Insect('maggot', 0, "white", "crawl", "rotten flesh", 0);
